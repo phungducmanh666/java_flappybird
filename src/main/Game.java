@@ -29,6 +29,7 @@ public class Game extends JFrame {
     }
 
     private Game(){
+        setTitle("Flappy bird");
         setSize(GameProperties.GAME_WIDTH, GameProperties.GAME_HEIGHT);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);

@@ -9,15 +9,15 @@ public class GameProperties {
     public static float pipeSpeed = 1;
 
     public static int pipeMinHeight = 50;
-    public static int halfPipeDistance = 100;
+    public static int halfPipeDistance = 70;
 
-    public static final int GAME_WIDTH = 700;
-    public static final int GAME_HEIGHT = 500;
+    public static final int GAME_WIDTH = 1200;
+    public static final int GAME_HEIGHT = 800;
 
     public static final int PIPE_WIDTH = 40;
-    public static final int PIPE_GENERATE_DELAY_MILLIS = 2000;
+    public static final int PIPE_GENERATE_DELAY_MILLIS = 4000;
 
-    public static final int BIRD_SIZE = 20;
+    public static final int BIRD_SIZE = 60;
 
     public static BirdPhysical birdStrategy = new BirdPhysical();
 

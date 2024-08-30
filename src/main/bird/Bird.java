@@ -24,7 +24,8 @@ public class Bird {
         y = GameProperties.GAME_HEIGHT / 3;
         width = GameProperties.BIRD_SIZE;
         height = GameProperties.BIRD_SIZE;
-        image = ImageManager.gI().getImage("flappybird.png");
+        // image = ImageManager.gI().getImage("flappybird.png");
+        image = ImageManager.gI().getImage("flappybird.gif");
     }
 
     public Bird(I_BirdStrategy strategy){

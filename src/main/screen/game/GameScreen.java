@@ -2,6 +2,7 @@ package main.screen.game;
 
 import javax.swing.JPanel;
 
+import core.manager.image.ImageManager;
 import main.Game;
 import main.GameProperties;
 import main.bird.Bird;
@@ -13,12 +14,14 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Color;
 import java.awt.FontMetrics;
+import java.awt.Image;
 
 
 public class GameScreen extends JPanel {
 
     private Bird bird;
     private CheckGameStatus checkGameStatus;
+    private Image backgroundImg;
 
     {
         GameProperties.bird = new Bird(GameProperties.birdStrategy);
@@ -27,6 +30,7 @@ public class GameScreen extends JPanel {
     }
 
     public GameScreen(){
+        this.backgroundImg = ImageManager.gI().getImage("background.png");
         GameProperties.startGameScreen();
         PipeManager.gI().reset();
         PipeRuntime.gI().start();
@@ -49,6 +53,8 @@ public class GameScreen extends JPanel {
         Image _image = createImage(getWidth(), getHeight());
         Graphics _g = _image.getGraphics();
         _g.clearRect(0, 0, getWidth(), getHeight());
+
+        _g.drawImage(this.backgroundImg, 0, 0, GameProperties.GAME_WIDTH, GameProperties.GAME_HEIGHT, null);
 
         //#region draw pipes
         PipeManager.gI().drawPipes(_g);
